@@ -12,9 +12,15 @@ class BasePrimary(BaseInstrument):
 
     def __init__(self) -> None:
         super().__init__()
-        self._buffers = dict()
+        self._buffers = {}
 
     def register_buffer(self, name: str, tensor: Tensor) -> None:
         self._buffers[name] = tensor
+
+
+    @property
+    def spot(self):
+        name = "spot"
+        return self._buffers[name]
 
     

@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 import torch
 from torch import Tensor
 
-class BaseInstruments(ABC):
+class BaseInstrument(ABC):
 
     cost: float
 
